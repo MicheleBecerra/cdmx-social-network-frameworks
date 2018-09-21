@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import FileUpload from './FileUpload'
 import './App.css'
-// import Navigation from './components/Navigation'
+
+// import firebase
+
 import firebase from 'firebase'
 class App extends Component {
   constructor () {
@@ -37,14 +40,15 @@ class App extends Component {
     if (this.state.user) {
       return (
         <div>
-          <img  width="250" src={this.state.user.photoURL} alt={this.state.user.displayName} />
+          <img width='350' src={this.state.user.photoURL} alt={this.state.user.displayName} />
           <p> Hola {this.state.user.displayName} </p>
           <button onClick={this.handleLogout}> Salir </button>
+          <FileUpload />
         </div>
       )
-    } else{
+    } else {
     // Sí no lo está
-      return (<button onClick={this.handleAuth}> Login con Goole</button>
+      return (<button onClick={this.handleAuth}> Login con Google</button>
       )
     }
   }
@@ -53,7 +57,7 @@ class App extends Component {
       <div className='App'>
         <div className='App-header'>
           <h2>My Social Network </h2>
-
+          <img />
         </div>
         <p className='App-intro'>
           { this.renderLoginButton() }
