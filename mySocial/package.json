@@ -2,10 +2,9 @@
   "name": "src",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://MicheleBecerra.github.io/cdmx-social-network-frameworks",
+  "homepage": "https://michelebecerra.github.io/cdmx-social-network-frameworks",
   "dependencies": {
     "firebase": "^5.5.1",
-    "gh": "^1.13.3",
     "gh-pages": "^2.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
