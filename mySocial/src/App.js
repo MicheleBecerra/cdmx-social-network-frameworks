@@ -63,10 +63,9 @@ class App extends Component {
       console.log(error.message)
     }, () => {
       console.log(task)
-      
       let Record = {
         photURL: this.state.user.photoURL,
-        displayName: this.state.user.displayName,
+        displayName: this.state.user.displayName
         // image: task.snapshot.downloadURL
       }
       // console.log(record)
