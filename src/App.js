@@ -3,8 +3,8 @@ import firebase from 'firebase'
 import FileUpload from './FileUpload'
 import './App.css'
 import logo from './logo.png'
-// const  db = firebase.firestore();
 
+// const  db = firebase.firestore();
 class App extends Component {
   constructor () {
     super()
@@ -23,8 +23,10 @@ class App extends Component {
       this.setState({user})
     })
     firebase.database().ref('pictures').on('child_added', snapshot => {
+      console.log( '1', snapshot)
       this.setState({
         pictures: this.state.pictures.concat(snapshot.val())
+
       })
     })
   }
@@ -62,7 +64,7 @@ class App extends Component {
     }, error => {
       console.log(error.message)
     }, () => {
-      console.log(task)
+      // console.log(task)
       let Record = {
         photURL: this.state.user.photoURL,
         displayName: this.state.user.displayName
@@ -92,6 +94,8 @@ class App extends Component {
             this.state.pictures.map(picture => (
               <div>
                 <img src={picture.image} />
+                console.log({picture.image});
+
                 <br />
                 <img width='30' src={picture.photoURL} alt={picture.displayName} />
                 <br />
