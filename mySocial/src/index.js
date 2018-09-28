@@ -2,9 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-// import registerServiceWorker from './registerServiceWorker'
+import registerServiceWorker from './registerServiceWorker'
 import * as firebase from 'firebase'
-// import FileUpload from './FileUpload'
 
 var config = {
   apiKey: 'AIzaSyAtSswEBoMSKEmTCLYqtyshjlRbD8Ij5RU',
@@ -20,4 +19,4 @@ ReactDOM.render(
   <App />,
   document.getElementById('root')
 )
-// registerServiceWorker()
+registerServiceWorker()
